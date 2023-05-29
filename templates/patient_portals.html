@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Information</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #006699;
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			width: 50%;
+			background-color: #ffffff;
+			border: 1px solid #cccccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			margin: 50px 0 0 50px;
+			padding: 30px;
+		}
+		li {
+			margin-bottom: 10px;
+			color: #666666;
+		}
+		li strong {
+			color: #006699;
+		}
+	</style>
+</head>
+<body>
+	<h1>User Health details</h1>
+	<ul>
+		<li><strong>ID:</strong> {{ list[0] }}</li>
+		<li><strong>Name:</strong> {{ list[1] }}</li>
+		<li><strong>Date of Birth:</strong> {{ list[2] }}</li>
+		<li><strong>Address:</strong> {{ list[3] }}</li>
+		<li><strong>Mobile Number:</strong> {{ list[4] }}</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doctor's Information</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: #006699;
+      text-align: center;
+    }
+    .box {
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      margin: 20px auto;
+      padding: 20px;
+      width: 50%;
+    }
+    .label {
+      color: #006699;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .value {
+      color: #333333;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Doctor's available in your area</h1>
+  {% for list in list %}
+  <div class="box">
+    <p class="label">Name:</p>
+    <p class="value">{{ list[1] }}</p>
+    <p class="label">Specialisation:</p>
+    <p class="value">{{ list[2] }}</p>
+    <p class="label">Education:</p>
+    <p class="value">{{ list[3] }}</p>
+    <p class="label">Hospital Address:</p>
+    <p class="value">{{ list[4] }}</p>
+    <p class="label">Mobile:</p>
+    <p class="value">{{ list[5] }}</p>
+  </div>
+  {% endfor %}
+</body>
+</html>

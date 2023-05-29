@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+		body {
+			background-color: #F8F8FF; /* light gray */
+		}
+		h1 {
+			color: #4169E1; /* royal blue */
+			text-align: center;
+		}
+		.login-box {
+			margin: 0 auto;
+			margin-top: 50px;
+			background-color: #F0F8FF; /* alice blue */
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #888888; /* gray */
+			max-width: 500px;
+		}
+		label {
+			color: #4B0082; /* indigo */
+		}
+		input[type="text"], input[type="password"], input[type="submit"] {
+			background-color: #FFFFFF; /* white */
+			border: none;
+			border-radius: 5px;
+			padding: 5px;
+			margin: 5px;
+			box-shadow: 0px 0px 5px #888888; /* gray */
+		}
+		input[type="submit"] {
+			background-color: #4169E1; /* royal blue */
+			color: #FFFFFF; /* white */
+			font-weight: bold;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover {
+			background-color: #000080; /* navy */
+		}
+	</style>
+</head>
+<body>
+	<div class="login-box">
+		<h1>Patient login check</h1>
+		<form action="/add_report" method="POST">
+			<label for="username">User ID:</label>
+			<input type="text" id="username" name="username"><br><br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password"><br><br>
+			<input type="submit" value="Login">
+		</form>
+	</div>
+</body>
+</html>

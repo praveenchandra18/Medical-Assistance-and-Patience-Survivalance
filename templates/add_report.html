@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>sections</title>
+        <style>
+        body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+      }
+            .section1 {
+              background-color: hwb(0 100% 0%); /* light gray */
+            }
+            
+            .section2 {
+              background-color: #b3dc70; /* darker gray */
+            }
+            
+            .section3 {
+              background-color: #511dc1; /* even darker gray */
+            }
+            .center {
+              text-align: center;
+            }
+            .login-box {
+              background-color:rgb(166, 201, 221);
+              padding: 40px;
+              border-radius: 10px;
+              width: 500px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div style="display: flex; align-items: center;background-color: #b3dc70;">    
+            <img src="D:\My_Programs\MAPS\Pictures\Logo.png" alt="" width="0" height="0">
+            <h1 style="color:blue;text-align: center;">Medical Assistance and Patients Survivalence(MAPS)</h1>
+        </div>
+          
+        <hr><hr>
+        <h2 style="COLOR:rgba(12, 207, 123, 0.811)">MEDICAL DETAILS</h2>
+        <h3>SECTION 1</h3>
+            <div class ="login-box">  
+                <input type="checkbox" id="c1" name="CT-SCAN" value="it" unchecked="True">CT-SCAN<BR>
+                <input type="checkbox" id="c2" name="MRI-SCAN" value="mech" unchecked="False">MRI-SCAN<BR>
+                <input type="checkbox" id="c3" name="X-RAY" value="auto" unchecked="False">X-RAY<BR>
+                <input type="checkbox" id="c4" name="BP TETS" value="market" unchecked="False">BP TEST<BR>
+                <input type="checkbox" id="c5" name="BLOOD TEST" value="R&d" unchecked="False">BLOOD TEST<BR>
+                <input type="checkbox" id="c6" name="SUGAR TEST" value="che" unchecked="False">SUGAR TEST<br>
+                <input type="checkbox" id="c7" name="KIDNEY TEST" value="edu" unchecked="False">KIDNEY TEST<br>
+                <input type="checkbox" id="c8" name="ECG" value="bio" unchecked="False">ECG<br>
+                <input type="checkbox" id="c8" name="PHYSIOTHERPY" value="bio" unchecked="False">PHYSIOTHERPY<br>
+                <input type="checkbox" id="c8" name="COVID TEST" value="bio" unchecked="False">COVID TEST<br>
+                <input type="submit" value="submit">
+            </div><br>
+            <hr>
+            <h3>SECTION 2</h3>
+            <div class ="login-box ">  
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    </CT-SCAN><h2><label for="file">Choose a file to upload:<br></label></h2><br>
+                    <h4>CT-SCAN</h4><input type="file" id="file" name="file">
+                    <br>
+                    <h4>MRI-SCAN</h4><input type="file" id="file" name="file">
+                    <br>
+                    <h4>X-RAY</h4><input type="file" id="file" name="file">
+                    <br>
+                    <h4>BP-TEST</h4><input type="file" id="file" name="file">
+                    <br>
+                    <h4>BLOOD TEST</h4><input type="file" id="file" name="file">
+                    <br>
+                    <h4>SUGAR TEST</h4><input type="file" id="file" name="file">
+                    <br>
+                    <h4>KIDNEY TEST</h4><input type="file" id="file" name="file">
+                    <br>
+                    <h4>ECG</h4><input type="file" id="file" name="file">
+                    <br>
+                    <h4>PHYSIOTHERPY</h4><input type="file" id="file" name="file">
+                    <br>
+                    <h4>COVID TEST</h4><input type="file" id="file" name="file">
+                    <br>
+                    <h4>OTHERS</h4><input type="file" id="file" name="file">
+                    <br><br>
+                    <input type="submit" value="Upload">
+                    <input type="submit" value="submit">
+                  </form>   
+            </div>
+            <hr>
+            <h3>SECTION 3</h3>
+            <div class="login-box">
+                <h2>Problem Description</h2>
+                <input type="text">
+                <input type="submit" value="submit">
+            </div>
+            <hr>
+            <h3>SECTION 4</h3>
+            <div class="login-box">
+               <h2>Enter the medicines</h2> 
+                1.<input type="text"><input type="checkbox" id="MORNING" name="CT-SCAN" value="it" unchecked="True">MORNING
+                <input type="checkbox" id="c2" name="AFTERNOON" value="mech" unchecked="False">AFTERNOON
+                <input type="checkbox" id="c3" name="NIGHT" value="auto" unchecked="False">NIGHT<br>
+                2.<input type="text"><input type="checkbox" id="MORNING" name="CT-SCAN" value="it" unchecked="True">MORNING
+                <input type="checkbox" id="c2" name="AFTERNOON" value="mech" unchecked="False">AFTERNOON
+                <input type="checkbox" id="c3" name="NIGHT" value="auto" unchecked="False">NIGHT<br>
+                3.<input type="text"><input type="checkbox" id="MORNING" name="CT-SCAN" value="it" unchecked="True">MORNING
+                <input type="checkbox" id="c2" name="AFTERNOON" value="mech" unchecked="False">AFTERNOON
+                <input type="checkbox" id="c3" name="NIGHT" value="auto" unchecked="False">NIGHT<br> 
+                <input type="submit" value="submit">    
+            </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find a Specialist</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #333333;
+			text-align: center;
+		}
+		form {
+			background-color: #ffffff;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 0 auto;
+			max-width: 500px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #333333;
+		}
+		input[type="text"], select {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			width: 100%;
+			margin-bottom: 20px;
+			box-sizing: border-box;
+			font-size: 16px;
+			color: #555555;
+			background-color: #f2f2f2;
+		}
+		input[type="submit"] {
+			background-color: #007bff;
+			color: #ffffff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover {
+			background-color: #0056b3;
+		}
+	</style>
+</head>
+<body>
+	<h1>Find a Specialist</h1>
+	<form action="/docs_around_you" method="post">
+		<label for="city_name">City Name:</label>
+		<input type="text" id="city_name" name="city_name"><br>
+		<label for="specialist_type">Specialist Type:</label>
+		<select id="specialist_type" name="specialist_type">
+			<option value="Cardiologist">Cardiologist</option>
+			<option value="Dermatologist">Dermatologist</option>
+			<option value="Neurologist">Neurologist</option>
+			<option value="Ophthalmologist">Ophthalmologist</option>
+		</select><br>
+		<input type="submit" value="Find Specialist">
+	</form>
+</body>
+</html>
