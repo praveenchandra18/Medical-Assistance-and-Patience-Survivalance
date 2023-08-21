@@ -86,7 +86,9 @@ def doctors_portal():
     data=[id]
     my_cursor.execute(query,data)
     lst=my_cursor.fetchall()
-    if(lst[0][6]==password_encryption(password)):
+    if len(lst)==0:
+        return "<h2>No such user</h2>"
+    elif(lst[0][6]==password_encryption(password)):
         return render_template('doctor_portal.html',list=lst[0])
     else:
         return "<h2>pass not matched</h2>"
