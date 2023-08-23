@@ -53,11 +53,14 @@
   <body>
     <div class="login-box">
       <h1>Login Page</h1>
-      <form method="POST" action="/patient_details">
+      <form method="POST" action="/patient_check">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username"><br><br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password"><br><br>
+        {% if message %}
+          <p>{{ message }}</p>
+        {% endif %}
         <input type="submit" value="Log In">
       </form>
       <p>Don't have an account? <a href="/patient_signup">Sign up here</a>.</p>
