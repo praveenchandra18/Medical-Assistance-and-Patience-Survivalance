@@ -63,6 +63,29 @@ def patient_details(userid):
     data=session.get(userid)
     session.pop(userid)
     return render_template('patient_portal.html',list=data)
+
+@app.route('/maps/patient_signup')
+def patient_signup():
+    return render_template('patient_signup.html')
+
+@app.route('/maps/signup_process',methods=['POST'])
+def patient_added():
+    name = request.form['name']
+    dob = request.form['dob']
+    address = request.form['address']
+    mobile=request.form['mobile']
+    password=request.form['password']
+    password=password_encryption(password)
+    id=id_generator(1)
+    my_data="""INSERT INTO patients (patient_id, patient_name, dob, address, mobile, password)
+                VALUES (%s,%s,%s,%s,%s,%s);"""
+    data=(id,name,dob,address,mobile,password)
+    my_cursor.execute(my_data,data)
+    maps_db.commit()
+    display=""" Your account is created
+                Please note your id number """+str(id)+"""
+                """
+    return render_template('patient_signup.html',message=display)
     
 if __name__=='__main__':
     app.run(debug=True)

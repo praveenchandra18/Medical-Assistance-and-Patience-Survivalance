@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Input Form</title>
-    <style>
-      body {
-        background-color: #f2f2f2;
-        font-family: Arial, sans-serif;
-      }
-      
-      h2 {
-        text-align: center;
-        color: #333;
-      }
-      
-      form {
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px #ccc;
-      }
-      
-      label {
-        display: block;
-        margin-bottom: 10px;
-        color: #333;
-      }
-      
-      input[type="text"],
-      input[type="date"],
-      input[type="tel"],
-      input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        box-sizing: border-box;
-        margin-bottom: 20px;
-        font-size: 16px;
-        color: #333;
-      }
-      
-      input[type="submit"] {
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 16px;
-        margin-top: 10px;
-      }
-      
-      input[type="submit"]:hover {
-        background-color: #3e8e41;
-      }
-      
-    </style>
-  </head>
-  <body>
+<head>
+  <title>Input Form</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    form {
+      max-width: 500px;
+      width: 90%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px #ccc;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+    
+    .message {
+      color: #ff0000;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    
+    .message a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    
+    .message a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
     <h2>Enter your details:</h2>
-    <form action="patient_added" method="post">
+    <form action="signup_process" method="post">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name">
       <label for="dob">Date of Birth:</label>
@@ -74,5 +97,10 @@
       <input type="password" id="password" name="password">
       <input type="submit" value="Submit">
     </form>
-  </body>
+    {% if message %}
+      <p class="message">{{ message }}</p>
+      <p class="message"><a href="http://127.0.0.1:5000/patient_login">Go back to login page</a></p>
+    {% endif %}
+  </div>
+</body>
 </html>
