@@ -29,12 +29,10 @@ def doctor_check():
 @doctor_bp.route('/maps/doctor_interface/<docid>')
 def doctor_details(docid):
     data=session.get(docid)
-    session.pop(docid)
-    return render_template('doctor_portal.html',list=data)
+    return render_template('doctor_portal.html',list=data,docid=docid)
 
-
-@doctor_bp.route('/add_report_check')
-def add_report_check():
+@doctor_bp.route('/doctor_interface/<docid>/add_report_check')
+def add_report_check(docid):
     return render_template('add_report_check.html')
 
 @doctor_bp.route('/add_report',methods=['POST'])
