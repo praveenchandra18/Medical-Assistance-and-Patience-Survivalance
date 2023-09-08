@@ -1,0 +1,14 @@
+
+maps --> index
+patient_interface --> patient_interface
+patient_details-----> patient_interface/userid
+patient_signup -----> patient_interface/signup
+
+maps-->index
+doctor_interface-->doctor_interface
+doctor details --->doctor_interface/docid
+patient_concent -->doctor_interface/docid
+doctor add report-->doctor_interface/docid/add_report
+
+doctors interface / signup or login / details and add a report(include patients concent)/ add a report
+enter the place / doctors around you
