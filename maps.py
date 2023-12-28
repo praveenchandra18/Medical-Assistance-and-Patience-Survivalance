@@ -16,7 +16,10 @@ def id_generator(code):
     if(code==0):
         my_cursor.execute("SELECT MAX(doctor_id) FROM doctors")
         result = my_cursor.fetchone()[0]
-        return int(result)+1
+        if(result==None):
+            return 100000000
+        else:
+            return int(result)+1
     else:
         my_cursor.execute("SELECT MAX(patient_id) FROM patients")
         result = my_cursor.fetchone()[0]

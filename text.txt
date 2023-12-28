@@ -12,3 +12,32 @@ doctor add report-->doctor_interface/docid/add_report
 
 doctors interface / signup or login / details and add a report(include patients concent)/ add a report
 enter the place / doctors around you
+
+
+/////////////////////////////////////////////////////////////////////
+Database code.........
+
+
+create database maps;
+use maps;
+CREATE TABLE doctors (
+doctor_id int,
+doctor_name varchar(48),
+specialisation varchar(255),
+education varchar(255),
+hospital_address text,
+mobile varchar(10),
+password varchar(255)
+);
+
+create table patients (
+patient_id int,
+patient_name varchar(48),
+dob date, 
+address text, 
+mobile varchar(10), 
+password varchar(255)
+);
+
+
+/////////////////////////////////////////////////////////////////////////////

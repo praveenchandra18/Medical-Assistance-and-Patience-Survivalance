@@ -1,12 +1,6 @@
-from maps import id_generator,password_encryption 
-import mysql.connector
-maps_db = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="Pdnejoh@18",
-  database="maps"
-)
-my_cursor= maps_db.cursor()
+from maps import id_generator,password_encryption
+from dependencies import my_cursor,maps_db
+# import mysql.connector
 
 name=input("Enter the name of the doctor ")
 specialisation=input("Enter the specialisation of the doctor ")
@@ -21,3 +15,4 @@ query="""insert into doctors(doctor_id,doctor_name,specialisation,education,hosp
          values (%s,%s,%s,%s,%s,%s,%s)"""
 my_cursor.execute(query,data)
 maps_db.commit()
+print("Added doctor to the database")

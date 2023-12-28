@@ -9,6 +9,9 @@ app.register_blueprint(doctor_bp)
 from patients import patient_bp
 app.register_blueprint(patient_bp)
 
+from docs_around_me import docs_around_me_bp
+app.register_blueprint(docs_around_me_bp)
+
 @app.route('/')
 def home():
     return render_template('index.html')

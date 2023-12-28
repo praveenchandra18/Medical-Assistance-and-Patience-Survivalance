@@ -5,7 +5,11 @@
 	<style>
 		body {
 			background-color: #f2f2f2;
-			font-family: Arial, sans-serif;
+        	font-family: Arial, sans-serif;
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        	height: 100vh;
 		}
 		h1 {
 			color: #333333;
@@ -50,8 +54,8 @@
 	</style>
 </head>
 <body>
-	<h1>Find a Specialist</h1>
-	<form action="/docs_around_you" method="post">
+	<form action="/maps/docs_around_you" method="post">
+		<h1>Find a Specialist</h1>
 		<label for="city_name">City Name:</label>
 		<input type="text" id="city_name" name="city_name"><br>
 		<label for="specialist_type">Specialist Type:</label>

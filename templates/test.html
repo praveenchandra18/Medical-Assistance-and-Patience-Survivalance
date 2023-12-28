@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Multiselect with File Upload</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Include Bootstrap Multiselect CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
+
+    <!-- Include Dropzone CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.css" />
+
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Include Bootstrap Multiselect JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+
+    <!-- Include Dropzone JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.js"></script>
+
+</head>
+<body>
+
+<!-- Build your select: -->
+<select id="example-getting-started" multiple="multiple">
+    <option value="cheese">Cheese</option>
+    <option value="tomatoes">Tomatoes</option>
+    <option value="mozarella">Mozzarella</option>
+    <option value="mushrooms">Mushrooms</option>
+    <option value="pepperoni">Pepperoni</option>
+    <option value="onions">Onions</option>
+</select>
+
+<!-- Dropzone File Upload -->
+<form action="/upload" class="dropzone" id="myDropzone"></form>
+
+<!-- Text Box -->
+<div class="form-group">
+    <label for="exampleTextBox">Additional Information:</label>
+    <textarea class="form-control" id="exampleTextBox" rows="4"></textarea>
+</div>
+
+<!-- Initialize Bootstrap Multiselect and Dropzone -->
+<script>
+    $(document).ready(function() {
+        // Initialize Bootstrap Multiselect
+        $('#example-getting-started').multiselect();
+
+        // Initialize Dropzone
+        Dropzone.autoDiscover = false;
+        $("#myDropzone").dropzone({
+            url: "/upload", // Set your upload URL
+            addRemoveLinks: true // Show remove links on each uploaded file
+        });
+    });
+</script>
+
+</body>
+</html>

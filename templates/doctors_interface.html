@@ -4,38 +4,30 @@
   <title>Doctor Login Page</title>
   <style>
     body {
-      background-color: #FFFFFF;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .login-container {
-      width: 300px; /* Adjust the width as needed */
-    }
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
     .login-box {
-      border: 2px solid #0066CC;
-      padding: 20px;
-      text-align: left;
-      border-radius: 5px;
-    }
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
     h1 {
-      color: #0066CC;
+      color: #006699;
       margin-top: 0;
     }
     label {
       font-weight: bold;
-      font-size: 18px;
-      color: #0066CC;
-      display: block;
-      margin-bottom: 10px;
+      color: #006699;
     }
     input[type="text"],
     input[type="password"] {
-      width: 100%;
       height: 30px;
       font-size: 16px;
       padding: 5px;
@@ -44,7 +36,7 @@
       border: 1px solid #CCCCCC;
     }
     input[type="submit"] {
-      background-color: #0066CC;
+      background-color:#006699;
       color: #FFFFFF;
       border: none;
       padding: 10px 20px;
@@ -54,26 +46,24 @@
       cursor: pointer;
     }
     input[type="submit"]:hover {
-      background-color: #003D7F;
+      background-color: #004466;
     }
   </style>
 </head>
 <body>
-  <div class="login-container">
-    <h1>Doctors Login Page</h1>
-    <div class="login-box">
-      <form method="POST" action="/doctor_check">
-        <label for="username">Id no</label>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br>
-        {% if message %}
-          {{ message }}
-        {% endif %}
-        <br><br>
-        <input type="submit" value="Log In">
-      </form>
-    </div>
+  <div class="login-box">
+    <h1>Doctors Login</h1>
+    <form method="POST" action="/doctor_check">
+      <label for="username">Doctor Id:</label>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br>
+      {% if message %}
+        {{ message }}
+      {% endif %}
+      <br><br>
+      <input type="submit" value="Log In">
+    </form>
   </div>
 </body>
 </html>
