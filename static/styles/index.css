@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-height: 100vh;
+    background-image: url("../Pictures/Max-Super-Speciality-Hospital-Saket-New-Delhi.jpg");
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+.container{
+    min-height: 100vh;
+    background-color: #84bbd7a0;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.heading{
+    margin-top: 20px;
+    min-height: 20vh;
+    min-width: 80vw;
+    padding: 10px;
+    /* background-color: #f2f2f2; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heading img{
+    height: 18vw;
+    max-height: 18vh;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.heading h1{
+    color: #000000;
+}
+.button-container{
+    /* background-color: #f2f2f2; */
+    /* border: 2px solid black; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 80vw;
+    box-sizing: border-box;
+
+}
+
+.button{
+    /* border: 2px solid black; */
+    width: 25vw;
+    height: fit-content;
+    margin: 20px;
+    color: black;
+    
+}
+
+.patient{
+    background-image: url("../Pictures/patient\ interface.jpg");
+    background-size: cover;
+    border-radius: 10%; 
+}
+.doctor{
+    background-image: url("../Pictures/doctor\ interface.jpg");
+    background-size: cover;
+    border-radius: 10%;
+}
+.around-me{
+    background-image: url("../Pictures/doctors_around_me.jpeg");
+    background-size: cover;
+    border-radius: 10%;
+}
+.remainder{
+    background-image: url("../Pictures/medicine\ remainder.jpeg");
+    background-size: cover;
+    border-radius: 10%;
+}
+.color{
+    background-color: rgba(255, 255, 255, 0.578);
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+}
+a{
+    width: 25vw;
+    height: 30vw;
+    max-height: 30vh;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:hover,a:focus{
+    font-size: 1.8rem;
+}

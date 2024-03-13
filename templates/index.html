@@ -2,77 +2,57 @@
 <html>
   <head>
     <title>MAPS</title>
-    <style>
-      body {
-        /* background-color: #4f84ba; */
-        background-image: url('"Pictures\\Logo.png"');
-        font-family: Arial, sans-serif;
-        text-align: center;
-      }
-      h1 {
-        color: #0066cc;
-        margin-top: 50px;
-        font-size: 35px;
-      }
-      .button-container {
-        display: flex;
-        background-image: url('"..\Pictures\Logo.png"');
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 50px;
-      }
-      .button {
-        background-color: #8e6ad1;
-        background-image: url('"D:\My_Programs\MAPS\Pictures\Logo.png"');
-        color: white;
-        border: none;
-        padding: 100px 100px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 32px;
-        margin: 20px 20px;
-        border-radius: 55px;
-        transition: all 0.3s ease-in-out;
-        background-position: center;
-        background-size: cover;
-      }
-      .button:hover {
-        background-color: #6ede8c;
-        cursor: pointer;
-      }
-      .patient {
-        background-image: url("D:\My_Programs\MAPS\Pictures\patient interface.jpg");
-        background-size: cover;
-      }
-      .doctor {
-        background-image: url("D:\My_Programs\MAPS\Pictures\doctor interface.jpg");
-        background-size: cover;
-      }
-      .around-me {
-        background-image: url("D:\My_Programs\MAPS\Pictures\doctors_around_me.jpeg");
-        background-size: cover;
-      }
-      .reminder {
-        background-image: url("D:\My_Programs\MAPS\Pictures\medicine remainder.jpeg");
-        background-size: cover;
-      }
-      .suggestor {
-        background-image: url("D:\My_Programs\MAPS\Pictures\fruits.jpeg");
-        background-size: cover;
-      }
-    </style>
+    <link rel="stylesheet" href="../static/styles/index.css">
   </head>
   <body>
-    <h1>MEDICAL ASSISTANCE AND PATIENT SURVIVALENCE(MAPS)</h1>
+    <div class="container">
+    <div class="heading">
+        <img src="../static/Pictures/Logo.png" alt="Logo" >
+        <h1>MEDICAL ASSISTANCE AND PATIENT SURVIVALENCE (MAPS)</h1>
+    </div>
+    <br>
     <div class="button-container">
-      <a href="http://127.0.0.1:5000/patient_interface" class="button patient">Patient Interface</a>
-      <a href="http://127.0.0.1:5000/doctors_interface" class="button doctor">Doctor's Interface</a>
-      <br>
-      <a href="http://127.0.0.1:5000/maps/docs_around_me" class="button around-me">Doctors Around Me</a>
-      <a href="http://127.0.0.1:5000/maps/medicine_remainder" class="button reminder">Medicine Reminder</a>
-      <a href="http://127.0.0.1:5000/maps/food_suggestor" class="button suggestor">Food Suggestor</a>
+        <div class="button">
+            <div class="patient">
+                <div class="color">
+                    <a href="http://127.0.0.1:5000/patient_interface" >Patient Interface</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="button">
+            <div class="doctor">
+                <div class="color">
+                    <a href="http://127.0.0.1:5000/doctors_interface" >Doctor's Interface</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="button">
+            <div class="around-me">
+                <div class="color">
+                    <a href="http://127.0.0.1:5000/docs_around_me" >Doctors Around Me</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="button">
+            <div class="remainder">
+                <div class="color">
+                    <a href="http://127.0.0.1:5000/medicine_remainder" >Medicine Reminder</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="button">
+            <div class="suggestor">
+                <div class="color">
+                    <a href="http://127.0.0.1:5000/maps/food_suggestor" class="button suggestor">Food Suggestor</a>
+                </div>
+            </div>
+        </div> -->
+        
+    </div>
     </div>
   </body>
 </html>

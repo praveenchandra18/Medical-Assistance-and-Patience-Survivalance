@@ -1,9 +1,8 @@
-from dependencies import my_cursor,password_encryption,id_generator,maps_db
-from flask import Flask,render_template, request, redirect, session
+from flask import Flask,render_template
 app=Flask(__name__)
 app.secret_key="jnaskjnakgnjaslgnaskjsnfgkjangkjdfgnkj"
 
-from doctors import doctor_bp
+from doctor import doctor_bp
 app.register_blueprint(doctor_bp)
 
 from patients import patient_bp
@@ -11,6 +10,9 @@ app.register_blueprint(patient_bp)
 
 from docs_around_me import docs_around_me_bp
 app.register_blueprint(docs_around_me_bp)
+
+from medicine_remainder import medicine_remainder_bp
+app.register_blueprint(medicine_remainder_bp)
 
 @app.route('/')
 def home():

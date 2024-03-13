@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='/styles/interface.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Medicine Remainder register</h1><br> 
+        <form method="POST" action="/medicine_remainder_check">
+            <label for="username">User Id:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            {% if message %}
+                <p>{{ message }}</p>
+            {% endif %}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/report.css')}}">
+    <title>Medical report</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Medical report</h1>
+    </div>
+    <div class="section" id="section1">
+        <h2>Medical Tests suggested</h2>
+            <form action="/tests_suggested" id="section1_form">
+                <div class="space">
+                    <input type="checkbox" id="c1" name="CT-SCAN" value="it" unchecked="False"><label for="c1">CT-SCAN</label>
+                </div>
+                <div class="space">
+                    <input type="checkbox" id="c2" name="MRI-SCAN" value="mech" unchecked="False"><label for="c2">MRI-SCAN</label>
+                </div>
+                <div class="space">
+                    <input type="checkbox" id="c3" name="X-RAY" value="auto" unchecked="False"><label for="c3">X-RAY </label>
+                </div>
+                <div class="space">
+                    <input type="checkbox" id="c4" name="BP TETS" value="market" unchecked="False"><label for="c4">BP TEST </label>
+                </div>
+                <div class="space">
+                    <input type="checkbox" id="c5" name="BLOOD TEST" value="R&d" unchecked="False"><label for="c5">BLOOD TEST </label>
+                </div>
+                <div class="space">
+                    <input type="checkbox" id="c6" name="SUGAR TEST" value="che" unchecked="False"><label for="c6">SUGAR TEST </label>
+                </div>
+                <div class="space">
+                    <input type="checkbox" id="c7" name="KIDNEY TEST" value="edu" unchecked="False"><label for="c7">KIDNEY TEST </label>
+                </div>
+                <div class="space">
+                    <input type="checkbox" id="c8" name="ECG" value="bio" unchecked="False"><label for="c8">ECG </label>
+                </div>
+                <div class="space">
+                    <input type="checkbox" id="c9" name="PHYSIOTHERPY" value="bio" unchecked="False"><label for="c9">PHYSIOTHERPY </label>
+                </div>
+                <div class="space">
+                    <input type="checkbox" id="c10" name="COVID TEST" value="bio" unchecked="False"><label for="c10">COVID TEST </label>
+                </div>
+            </form>
+            <input type="submit" value="Submit" onclick="submit_section1()">
+    </div>
+
+    <div class="section" id="section2">
+        <h3>SECTION 2</h3>
+            <div class ="items"> 
+                <h3>Choose a file to upload:</h3>
+                <form action="/test_results">
+                    <div class="space">
+                        <label for="ct-scan file">CT-SCAN:</label><br><input type="file" id="ct-scan file" name="ct-scan file">
+                    </div>
+                    <div class="space">
+                        <label for="mri-scan file">MRI-SCAN</label><br><input type="file" id=" mri-scan file" name="mri-scan file">
+                    </div>
+                    <div class="space">
+                        <label for="x-ray file">X-RAY</label><br><input type="file" id="x-ray file" name="x-ray file">
+                    </div>
+                    <div class="space">
+                        <label for="blood-test file">BLOOD TEST</label><br><input type="file" id="blood-test file" name="blood-test file">
+                    </div>
+                    <div class="space">
+                        <label for="sugar-test file">SUGAR TEST</label><br><input type="file" id="sugar-test file" name="sugar-test file">
+                    </div>
+                    <div class="space">
+                        <label for="kidney-test file">KIDNEY TEST</label><br><input type="file" id="kidney-test file" name="kidney-test file">
+                    </div>
+                    <div class="space">
+                        <label for="ecg file">ECG</label><br><input type="file" id="ecg file" name="ecg file">
+                    </div>
+                    <div class="space">
+                        <label for="physiotherapy">PHYSIOTHERAPY</label><br><input type="file" id="physiotherapy file" name="physiotherapy file">
+                    </div>
+                    <div class="space">
+                        <label for="covid-test file">COVID TEST</label><br><input type="file" id="covid-test file" name="covid-test file">
+                    </div>
+                    <div class="space">
+                        <label for="others file">OTHERS</label><br><input type="file" id="others file" name="others file">
+                    </div>
+                    <br>
+                    <input type="submit" value="Submit">
+                  </form>   
+            </div>
+    </div>
+
+    <form action="/description">
+        <div class="section" id="section3">
+            <h3>SECTION 3</h3>
+                <div class="items">
+                    <label for="description"><h2>Problem description:</h2></label><br>
+                    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+                    <input type="submit" value="Submit">
+                </div>
+        </div>
+    </form>
+
+    <div class="section" id="section4">
+        <h3>SECTION 4</h3>
+            <div class="items" id="medicines">
+               <h2>Enter the medicines</h2>
+               <div class="space">
+                    <label for="m1">1.</label><input type="text" id="m1">
+                    <input type="checkbox" id="m1 MORNING" unchecked="'True"><label for="m1 MORNING">MORNING</label>
+                    <input type="checkbox" id="m1 AFTERNOON" unchecked="'True"><label for="m1 AFTERNOON">AFTERNOON</label>
+                    <input type="checkbox" id="m1 NIGHT" unchecked="'True"><label for="m1 NIGHT">NIGHT</label>
+               </div>
+               <div class="space">
+                    <label for="m2">2.</label><input type="text" id="m2">
+                    <input type="checkbox" id="m2 MORNING" unchecked="'True"><label for="m2 MORNING">MORNING</label>
+                    <input type="checkbox" id="m2 AFTERNOON" unchecked="'True"><label for="m2 AFTERNOON">AFTERNOON</label>
+                    <input type="checkbox" id="m2 NIGHT" unchecked="'True"><label for="m2 NIGHT">NIGHT</label>
+                </div>
+                <div class="space">
+                    <label for="m3">3.</label><input type="text" id="m3">
+                    <input type="checkbox" id="m3 MORNING" unchecked="'True"><label for="m3 MORNING">MORNING</label>
+                    <input type="checkbox" id="m3 AFTERNOON" unchecked="'True"><label for="m3 AFTERNOON">AFTERNOON</label>
+                    <input type="checkbox" id="m3 NIGHT" unchecked="'True"><label for="m3 NIGHT">NIGHT</label>
+                </div>
+            </div>
+        <!-- <input type="submit" value="+" onclick="add_medicine()"><br> -->
+        <button type="button" onclick="add_medicine()">+</button>
+        <input type="submit" value="Submit" onclick="submit_section4()">
+    </div>
+    <script src="{{url_for('static',filename='scripts/report.js')}}"></script>
+</body>
+</html>

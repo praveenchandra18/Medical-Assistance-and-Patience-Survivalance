@@ -3,11 +3,11 @@ from dependencies import my_cursor
 
 docs_around_me_bp=Blueprint('docs_around_me',__name__)
 
-@docs_around_me_bp.route('/maps/docs_around_me')
+@docs_around_me_bp.route('/docs_around_me')
 def doctors_around_me():
     return render_template('docs_around_me.html')
 
-@docs_around_me_bp.route('/maps/docs_around_you',methods=['POST'])
+@docs_around_me_bp.route('/docs_around_you',methods=['POST'])
 def doctors_around_you():    
     city=request.form['city_name']
     specialist=request.form['specialist_type']

@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    /* background-image:url("../static/patient\ interface.jpg") ; */
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  h1 {
+    color: #006699;
+  }
+  label {
+    color: #666666;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="password"] {
+    border: 2px solid #cccccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #666666;
+  }
+  input[type="submit"] {
+    background-color: #006699;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #004466;
+  }
+  a {
+    color: #006699;
+  }

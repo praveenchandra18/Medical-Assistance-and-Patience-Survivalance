@@ -1,4 +1,4 @@
-from maps import id_generator,password_encryption
+from dependencies import id_generator,password_encryption
 from dependencies import my_cursor,maps_db
 # import mysql.connector
 
