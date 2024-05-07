@@ -14,6 +14,9 @@ app.register_blueprint(docs_around_me_bp)
 from medicine_remainder import medicine_remainder_bp
 app.register_blueprint(medicine_remainder_bp)
 
+from diet_suggestor import suggestor_bp
+app.register_blueprint(suggestor_bp)
+
 @app.route('/')
 def home():
     return render_template('index.html')

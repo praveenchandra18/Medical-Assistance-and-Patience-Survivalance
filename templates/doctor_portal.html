@@ -57,6 +57,11 @@
 			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 		}
 
+		.center{
+			display: block;
+			text-align: center;
+		}
+
 		button:hover {
 			background-color: #0c3f6c;
 		}
@@ -105,19 +110,21 @@
 	</style>
 </head>
 <body>
-	{% if message %}
-        {{ message }}
-    {% endif %}
 	<h1>Doctor's Details</h1>
 	<ul>
 		<li><strong>ID:</strong> {{ list[0] }}</li>
 		<li><strong>Name:</strong> {{ list[1] }}</li>
 		<li><strong>Specialisation:</strong> {{ list[2] }}</li>
 		<li><strong>Education:</strong> {{ list[3] }}</li>
-		<li><strong>Hospital Address:</strong> {{ list[4] }}</li>
-		<li><strong>Mobile:</strong> {{ list[5] }}</li>
+		<!-- <li><strong>Hospital ID:</strong> {{ list[4] }}</li> -->
+		<li><strong>Hospital:</strong> {{ list[5] }}</li>
 	</ul>
 	<!-- <button onclick="window.location.href='/doctor_interface/{{docid}}/add_report_check'">Add Report</button> -->
+	<div class="center">
+		{% if message %}
+        	{{ message }}
+      	{% endif %}
+	</div>
 	<div class="buttons">
 			<button onclick="past_reports()">Past Reports</button>
 			<button onclick="add_report()">Add Report</button>

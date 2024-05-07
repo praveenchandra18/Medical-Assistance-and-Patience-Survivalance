@@ -23,11 +23,13 @@
     .label {
       color: #006699;
       font-weight: bold;
-      margin-bottom: 5px;
+      /* margin-bottom: 5px; */
+    }
+    li{
+      padding-bottom: 3px;
     }
     .value {
       color: #333333;
-      margin: 0;
     }
   </style>
 </head>
@@ -35,16 +37,15 @@
   <h1>Doctor's available in your area</h1>
   {% for list in list %}
   <div class="box">
-    <p class="label">Name:</p>
-    <p class="value">{{ list[1] }}</p>
-    <p class="label">Specialisation:</p>
-    <p class="value">{{ list[2] }}</p>
-    <p class="label">Education:</p>
-    <p class="value">{{ list[3] }}</p>
-    <p class="label">Hospital Address:</p>
-    <p class="value">{{ list[4] }}</p>
-    <p class="label">Mobile:</p>
-    <p class="value">{{ list[5] }}</p>
+    <ul>
+      <li><strong class="label">Name:</strong>{{ list[1] }}</li>
+      <li><strong class="label">Specialisation:</strong> {{ list[2] }}</li>
+      <li><strong class="label">Education:</strong> {{ list[3] }}</li>
+      <li><strong class="label">Hospital :</strong> {{ list[4] }}</li>
+      <li><strong class="label">Hospital Address:</strong>{{ list[7] }}</li>
+      <li><strong class="label">Hospital mobile:</strong>{{ list[6] }}</li>
+      <li><strong class="label"><a href="{{list[5]}}">Location</a></strong></li>
+    </ul>
   </div>
   {% endfor %}
 </body>

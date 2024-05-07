@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='/styles/interface.css')}}">
+    <style>
+        body{
+            background-image: url("../static/Pictures/Food.jpg");
+        }
+        input[type="number"] {
+              width: 50%;
+              padding: 10px;
+              margin: 5px 0;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              box-sizing: border-box;
+              font-size: 16px;
+            }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-box">
+        <h1>Diet suggestor</h1><br> 
+        <form method="POST" action="/diet_prediction"> 
+            <label class="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="1" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="0">
+            <label for="female">Female</label><br><br>
+
+            <label for="num1">Weight(in kgs):</label>
+            <input type="number" id="num1" name="num1" required><br><br>
+            
+            <label for="num2">Height(in cm):</label>
+            <input type="number" id="num2" name="num2" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+        {% if breakfast %}
+            <h3>Breakfast:</h3>
+            {% for i in breakfast %}
+                {{i[0]}}<br>
+            {% endfor %}
+            <h3>Lunch:</h3>
+            {% for i in lunch %}
+                {{i[0]}}<br>
+            {% endfor %}
+            <h3>Dinner:</h3>
+            {% for i in dinner %}
+                {{i[0]}}<br>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,5 +1,6 @@
 import hashlib
 import mysql.connector
+
 maps_db=mysql.connector.connect(
   host="localhost",
   user="root",
@@ -7,6 +8,7 @@ maps_db=mysql.connector.connect(
   database="maps"
 )
 my_cursor=maps_db.cursor()
+my_cursor2=maps_db.cursor()
 
 def id_generator(code):
     if(code==0):

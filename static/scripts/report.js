@@ -10,10 +10,10 @@ function add_medicine(){
     let medicines= document.getElementById("medicines");
     let new_medicine=`
         <div class="space">
-            <label for="m${variable}">${variable}.</label><input type="text" id="m${variable}">
-            <input type="checkbox" id="m${variable} MORNING" unchecked="'True"><label for="m${variable} MORNING">MORNING</label>
-            <input type="checkbox" id="m${variable} AFTERNOON" unchecked="'True"><label for="m${variable} AFTERNOON">AFTERNOON</label>
-            <input type="checkbox" id="m${variable} NIGHT" unchecked="'True"><label for="m${variable} NIGHT">NIGHT</label>
+            <label for="m${variable}">${variable}.</label><input type="text" id="m${variable}" name="medicine[]">
+            <input type="checkbox"name="schedule${variable}" value="0" id="m${variable} MORNING" unchecked="True"><label for="m${variable} MORNING">MORNING</label>
+            <input type="checkbox"name="schedule${variable}" value="1" id="m${variable} AFTERNOON" unchecked="True"><label for="m${variable} AFTERNOON">AFTERNOON</label>
+            <input type="checkbox"name="schedule${variable}" value="2" id="m${variable} NIGHT" unchecked="True"><label for="m${variable} NIGHT">NIGHT</label>
         </div>
     `;
     medicines.innerHTML += new_medicine;
@@ -39,4 +39,14 @@ function submit_section4() {
     });
 
     console.log("Medicines Data:", medicinesData);
+}
+
+function submit_sections(){
+    let form2=document.getElementById("section2_form")
+    let form3=document.getElementById("section3_form")
+    let form4=document.getElementById("section4_form")
+
+    form2.submit()
+    form3.submit()
+    form4.submit()
 }

@@ -6,6 +6,10 @@
 		body {
 			background-color: #f2f2f2;
 			font-family: Arial, sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
 		}
 		h1 {
 			color: #006699;
@@ -14,12 +18,12 @@
 			list-style-type: none;
 			padding: 0;
 			margin: 0;
-			width: 50%;
+			width: 50vw;
 			background-color: #ffffff;
 			border: 1px solid #cccccc;
 			border-radius: 10px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			margin: 50px 0 0 50px;
+			margin: 5px 0 0 20px;
 			padding: 30px;
 		}
 		li {
@@ -28,6 +32,9 @@
 		}
 		li strong {
 			color: #006699;
+		}
+		img{
+			width: 20vw;
 		}
 	</style>
 </head>
@@ -40,5 +47,21 @@
 		<li><strong>Address:</strong> {{ list[3] }}</li>
 		<li><strong>Mobile Number:</strong> {{ list[4] }}</li>
 	</ul>
+	<h1>Health prescriptions</h1>
+
+	{% for i in range(list_of_lists|length) %}
+		<ul>
+			<li><strong>Doctor:</strong> {{ list_of_lists[i][7] }}</li><br>
+			<li><strong>Tests Done:</strong> {{ list_of_lists[i][3] }}</li><br>
+			<li><strong>Tests Results:</strong>
+				{% for j in range(images[i] | length) %}
+					<img src="data:image/jpeg;base64,{{images[i][j]}}">
+				{% endfor %}
+			</li><br>
+			<li><strong>Description:</strong> {{ list_of_lists[i][4] }}</li><br>
+			<li><strong>Tablets suggested:</strong> {{ list_of_lists[i][5] }}</li>
+		</ul>
+	{% endfor %}
+	
 </body>
 </html>
