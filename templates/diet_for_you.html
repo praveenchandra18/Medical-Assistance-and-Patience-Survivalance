@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diet suggested for you</title>
+<style>
+  /* CSS styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url("../static/Pictures/Food.jpg");
+    background-attachment: fixed;
+    background-size:cover ;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  h1{
+    text-align: center;
+    margin-top: 2vh;
+    color: #006699;
+  }
+  p{
+    text-align: center;
+    /* margin-top: 4vh; */
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #006699;
+  }
+
+  ul {
+    /* list-style-type:disc;
+    padding: 0;
+    margin: 0; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  li {
+    /* margin-bottom: 5px; */
+    color: black;
+    /* margin: 10px; */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="list">
+    <h1>Diet suggested for you</h1>
+    {% if message %}
+      <p>{{ message }}</p>
+    {% endif %}
+  </div>
+
+  <div class="list">
+    <h2>Breakfast</h2>
+    <ul>
+      {% for i in breakfast %}
+        <li>{{i[0]}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  <div class="list">
+    <h2>Lunch</h2>
+    <ul>
+      {% for i in lunch %}
+        <li>{{i[0]}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="list">
+    <h2>Dinner</h2>
+    <ul>
+        {% for i in dinner %}
+          <li>{{i[0]}}</li>
+        {% endfor %}
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

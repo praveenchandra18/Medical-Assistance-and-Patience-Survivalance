@@ -55,8 +55,8 @@ def patient_check():
         return render_template('medicine_remainder_register_page.html',message=message)
     
 def send_message(code):
-    account_sid = 'account_sid'
-    auth_token = 'auth_token'
+    account_sid = 'AC0581a75d20af35c4cf23f4ada11b2b46'
+    auth_token = '9d23c8907552d6468dfcd533c71db317'
     client = Client(account_sid, auth_token)
 
     my_cursor2=maps_db.cursor()

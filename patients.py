@@ -32,7 +32,7 @@ def patient_check():
 @patient_bp.route('/patient_interface/<userid>')
 def patient_details(userid):
     data=session.get('pat_data')
-    print(data)
+    # print(data)
     # session.pop('user_data')
     sql_query="""select * from medical_prescriptions
                  where patient_id=%s

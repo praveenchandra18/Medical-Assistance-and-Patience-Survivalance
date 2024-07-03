@@ -45,8 +45,39 @@
       <li><strong class="label">Hospital Address:</strong>{{ list[7] }}</li>
       <li><strong class="label">Hospital mobile:</strong>{{ list[6] }}</li>
       <li><strong class="label"><a href="{{list[5]}}">Location</a></strong></li>
+      <li class="available">Random</li>
     </ul>
   </div>
   {% endfor %}
+
+  <script>
+  // JavaScript code
+  // const box = document.getElementById('available');
+  const availableItems = document.querySelectorAll('.available');
+
+  availableItems.forEach(function(item) {
+    // Array of colors
+    const colors = ['#ff0000', '#00ff00','#00ff00'];
+    const texts = ['Not Available', 'Available','Available'];
+
+    // Randomly choose an index from 0 to 1
+    const randomIndex = Math.floor(Math.random() * 3);
+
+    // Set the background color and text content of the "available" element
+    item.style.color = colors[randomIndex];
+    item.textContent = texts[randomIndex];
+  });
+
+  // // Array of two colors
+  // const colors = ['#ff0000', '#00ff00'];
+  // const text=['Not Available','Available'];
+
+  // // Randomly choose an index from 0 to 1
+  // const randomIndex = Math.floor(Math.random() * 2);
+
+  // // Set the background color of the box
+  // box.style.color = colors[randomIndex];
+  // box.textContent= text[randomIndex];
+  </script>
 </body>
 </html>

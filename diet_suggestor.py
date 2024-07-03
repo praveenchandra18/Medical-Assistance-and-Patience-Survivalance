@@ -71,4 +71,4 @@ def diet_prediction():
         if(i[4]==1):
             dinner.append(i)
 
-    return render_template('food_suggestor.html',message=message,lst=lst,breakfast=breakfast,lunch=lunch,dinner=dinner)
+    return render_template('diet_for_you.html',message=message,breakfast=breakfast,lunch=lunch,dinner=dinner)

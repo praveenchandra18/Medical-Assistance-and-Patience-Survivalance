@@ -1,5 +1,7 @@
 from flask import Flask,render_template
+
 app=Flask(__name__)
+
 app.secret_key="jnaskjnakgnjaslgnaskjsnfgkjangkjdfgnkj"
 
 from doctor import doctor_bp
